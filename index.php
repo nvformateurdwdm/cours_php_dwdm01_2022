@@ -57,7 +57,63 @@
             echo $jourDeLaSemaine[$i];
         }
 
+        // objet
+        echo "<br>";
+        $obj = new stdClass();
+        var_dump($obj);
+        echo "<br>";
+
+        class Personne{
+            public $prenom;
+            public $nom;
+
+            public function __construct($prenom, $nom){
+                $this->prenom = $prenom;
+                $this->nom = $nom;
+            }
+
+            public function parler(){
+                echo $this->prenom . " bla bla bla bla.";
+                echo "<br>";
+            }
+        }
+
+        class Stagiaire extends Personne{
+            public function __construct($prenom, $nom, $estTimide){
+                parent::__construct($prenom, $nom);
+                
+                $this->estTimide = $estTimide;
+            }
+
+            public function sePresenter(){
+                if(!$this->estTimide){
+                    echo $this->prenom . " " . $this->nom . " " . "se présente.";
+                }else{
+                    echo $this->prenom . " " . $this->nom . " " . "ne se présente pas.";
+                }
+                echo "<br>";
+            }
+        }
+
+        $toto = new Personne("Jean", "MARTIN");
+        var_dump($toto);
+        echo "<br>";
         
+        $jessica = new Stagiaire("Jessica", "JOSEPHINE", true);
+        $richard = new Stagiaire("Richard", "MALAC", false);
+        
+        var_dump($jessica);
+        echo "<br>";
+        var_dump($richard);
+        echo "<br>";
+        
+        $jessica->parler();
+        
+        $jessica->sePresenter();
+        $richard->sePresenter();
+
+
+
     
     ?>
 </body>
