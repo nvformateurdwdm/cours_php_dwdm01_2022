@@ -75,6 +75,12 @@
             public function parler(){
                 echo $this->prenom . " bla bla bla bla.";
                 echo "<br>";
+                $this->_test();
+            }
+
+            private function _test(){
+                echo "Ceci est mon test privé.";
+                echo "<br>";
             }
         }
 
@@ -98,6 +104,8 @@
         $toto = new Personne("Jean", "MARTIN");
         var_dump($toto);
         echo "<br>";
+
+        // $toto->parler();
         
         $jessica = new Stagiaire("Jessica", "JOSEPHINE", true);
         $richard = new Stagiaire("Richard", "MALAC", false);
@@ -111,6 +119,8 @@
         
         $jessica->sePresenter();
         $richard->sePresenter();
+
+        // $jessica->_test();
 
 
 
