@@ -25,6 +25,21 @@
         echo $nomComplet;
         echo "<br>";
         var_dump($nomComplet);
+        echo "<br>";
+
+        $age = 12;
+        $phrase = "Bonjour, je m'appelle " . $nomComplet . ". J'ai " . $age . " ans.";
+        echo "<br>";
+        echo strlen($nomComplet);
+        echo "<br>";
+        echo str_word_count($phrase);
+        echo "<br>";
+        echo strpos($phrase, "j");
+        echo "<br>";
+        echo strrev($phrase);
+        echo "<br>";
+        echo str_replace("12", "41", $phrase);
+
     
     ?>
 </body>
