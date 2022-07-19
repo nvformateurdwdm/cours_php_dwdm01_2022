@@ -82,6 +82,11 @@
                 echo "Ceci est mon test privé.";
                 echo "<br>";
             }
+
+            protected function _prot(){
+                echo "Ceci est ma méthode protégée";
+                echo "<br>";
+            }
         }
 
         class Stagiaire extends Personne{
@@ -98,6 +103,7 @@
                     echo $this->prenom . " " . $this->nom . " " . "ne se présente pas.";
                 }
                 echo "<br>";
+                parent::_prot();
             }
         }
 
@@ -120,7 +126,7 @@
         $jessica->sePresenter();
         $richard->sePresenter();
 
-        // $jessica->_test();
+        $jessica->_prot();
 
 
 
