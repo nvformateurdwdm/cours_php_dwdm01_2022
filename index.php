@@ -9,12 +9,22 @@
 <body>
     <?php 
     
+        // ma première déclaration de variable en PHP.
+        /**
+         * Je veux mettre
+         * un texte sur plusieurs lignes.
+         */
         $nom = "VEDRINE";
         $prenom = "Nicolas";
 
         echo $nom;
         echo "<br>";
         echo $prenom;
+        echo "<br>";
+        $nomComplet = $prenom . " " . $nom;
+        echo $nomComplet;
+        echo "<br>";
+        var_dump($nomComplet);
     
     ?>
 </body>
