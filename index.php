@@ -39,6 +39,13 @@
         echo strrev($phrase);
         echo "<br>";
         echo str_replace("12", "41", $phrase);
+        echo "<br>";
+
+        $bool = true;
+        var_dump($bool);
+        echo "<br>";
+        $condition = 2 < 1;
+        var_dump($condition);
 
     
     ?>
