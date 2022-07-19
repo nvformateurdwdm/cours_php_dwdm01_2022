@@ -44,9 +44,20 @@
         $bool = true;
         var_dump($bool);
         echo "<br>";
-        $condition = 2 < 1;
+        $condition = $nom == $nom;
         var_dump($condition);
+        echo "<br>";
+        // tableau
+        $jourDeLaSemaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+        array_push($jourDeLaSemaine, "dimanche");
+        var_dump($jourDeLaSemaine);
 
+        for ($i=0; $i < count($jourDeLaSemaine); $i++) { 
+            echo "<br>";
+            echo $jourDeLaSemaine[$i];
+        }
+
+        
     
     ?>
 </body>
