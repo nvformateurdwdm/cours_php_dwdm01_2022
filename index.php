@@ -90,10 +90,18 @@
         }
 
         class Stagiaire extends Personne{
+
+            private $_estAbsent = false;
+
             public function __construct($prenom, $nom, $estTimide){
                 parent::__construct($prenom, $nom);
                 
                 $this->estTimide = $estTimide;
+                echo "<br>";
+            }
+
+            public function __get($estAbsent){
+                return $this->_estAbsent;
             }
 
             public function sePresenter(){
@@ -126,7 +134,15 @@
         $jessica->sePresenter();
         $richard->sePresenter();
 
-        $jessica->_prot();
+        $jessica->estTimide = false;
+        var_dump($jessica);
+
+        $test = $jessica->estAbsent;
+        // echo "<br>toto";
+        // var_dump($test);
+
+        $jessica->estAbsent = true;
+        var_dump($jessica);
 
 
 
