@@ -16,6 +16,10 @@
         if(isset($_POST["prenom"])){
             echo "<h1>Bonjour, je m'appelle " . $_POST["prenom"] . " " . $_POST["nom"] . "." . "</h1>";
         }
+
+        if(isset($_SESSION["prenom"])){
+            echo "<h1>Bonjour, je m'appelle " . $_SESSION["prenom"] . " " . $_SESSION["nom"] . "." . $_SESSION["age"] . " ans." . "</h1>";
+        }
         
     ?>
 </body>
