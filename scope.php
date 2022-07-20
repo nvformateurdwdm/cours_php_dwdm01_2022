@@ -8,6 +8,9 @@
 </head>
 <body>
     <?php
+        $jourDeLaSemaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+        define("URL_SITE", $jourDeLaSemaine);
+
         $var1 = "var1";
 
         function myFunc(){
@@ -15,11 +18,13 @@
             $i++;
             echo $i;
             echo "<br>";
+            var_dump(URL_SITE);
         }
 
+        // myFunc();
+        // myFunc();
         myFunc();
-        myFunc();
-        myFunc();
+        // echo URL_SITE;
     ?>
 </body>
 </html>
