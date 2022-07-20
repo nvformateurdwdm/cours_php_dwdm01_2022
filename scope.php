@@ -10,15 +10,16 @@
     <?php
         $var1 = "var1";
 
-        function myFunc($var){
-            echo $var;
+        function myFunc(){
+            static $i = 0;
+            $i++;
+            echo $i;
             echo "<br>";
-            $GLOBALS["varDeFunc"] = "varDeFunc";
-            // echo $varDeFunc;
         }
 
-        myFunc($var1);
-        echo "toto" . $GLOBALS["varDeFunc"];
+        myFunc();
+        myFunc();
+        myFunc();
     ?>
 </body>
 </html>
