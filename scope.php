@@ -12,9 +12,13 @@
 
         function myFunc($var){
             echo $var;
+            echo "<br>";
+            $varDeFunc = "varDeFunc";
+            echo $varDeFunc;
         }
 
         myFunc($var1);
+        echo $varDeFunc;
     ?>
 </body>
 </html>
