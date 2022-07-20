@@ -93,16 +93,23 @@
 
             private $_estAbsent = false;
 
-            public function __construct($prenom, $nom, $estTimide){
+            public function __construct($prenom, $nom, $estTimide, $estAbsent){
                 parent::__construct($prenom, $nom);
                 
                 $this->estTimide = $estTimide;
+                $this->_estAbsent = $estAbsent;
                 echo "<br>";
             }
 
             public function __get($estAbsent){
                 return $this->_estAbsent;
             }
+
+            public function __set($estAbsent, $value){
+                $this->_estAbsent = $value;
+            }
+
+
 
             public function sePresenter(){
                 if(!$this->estTimide){
@@ -121,8 +128,8 @@
 
         // $toto->parler();
         
-        $jessica = new Stagiaire("Jessica", "JOSEPHINE", true);
-        $richard = new Stagiaire("Richard", "MALAC", false);
+        $jessica = new Stagiaire("Jessica", "JOSEPHINE", true, false);
+        $richard = new Stagiaire("Richard", "MALAC", false, true);
         
         var_dump($jessica);
         echo "<br>";
@@ -142,7 +149,10 @@
         // var_dump($test);
 
         $jessica->estAbsent = true;
-        var_dump($jessica);
+        // var_dump($jessica->estAbsent);
+        echo "<br>";
+        $estAbsent = $jessica->estAbsent;
+        var_dump($estAbsent);
 
 
 
