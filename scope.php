@@ -13,12 +13,12 @@
         function myFunc($var){
             echo $var;
             echo "<br>";
-            $varDeFunc = "varDeFunc";
-            echo $varDeFunc;
+            $GLOBALS["varDeFunc"] = "varDeFunc";
+            // echo $varDeFunc;
         }
 
         myFunc($var1);
-        echo $varDeFunc;
+        echo "toto" . $GLOBALS["varDeFunc"];
     ?>
 </body>
 </html>
